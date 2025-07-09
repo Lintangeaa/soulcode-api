@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-const sendMail = async (req, res) => {
+const sendMail = async (req) => {
   if (!req.body) {
     return {
       status: false,
