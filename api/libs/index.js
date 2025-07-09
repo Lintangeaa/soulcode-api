@@ -4,6 +4,6 @@ dotenv.config();
 
 const PORT = process.env.PORT || 7001;
 
-module.exports = {
+export default {
   PORT,
 };

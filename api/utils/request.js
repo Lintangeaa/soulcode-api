@@ -25,4 +25,4 @@ const requestHandler = (fn) => {
   };
 };
 
-module.exports = requestHandler;
+export default requestHandler;
