@@ -1,7 +1,11 @@
 const express = require('express');
 const customerRouter = require('./http/customers/customer.routes');
 const pushWaRouter = require('./http/push-wa/push-wa.routes');
+
 const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => res.send('Express on Vercel'));
 
