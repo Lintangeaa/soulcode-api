@@ -1,6 +1,6 @@
 import express from 'express';
-import { PORT } from './libs';
 import serverless from 'serverless-http';
+import { PORT } from './libs/index';
 
 const app = express();
 const port = PORT || 3000;
