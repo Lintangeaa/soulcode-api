@@ -1,7 +1,6 @@
-const express = require('express');
-const serverless = require('serverless-http');
-const emailRouter = require('./app/email/email.routes');
-const { PORT } = require('./libs');
+import express from 'express';
+import { PORT } from './libs';
+import serverless from 'serverless-http';
 
 const app = express();
 const port = PORT || 3000;
@@ -17,8 +16,7 @@ app.get('/', (req, res) => {
 
 app.use('/email', emailRouter);
 
-// ✅ Export handler untuk Serverless (Vercel, Netlify, AWS Lambda)
-module.exports.handler = serverless(app);
+export default serverless(app);
 
 if (process.env.NODE_ENV === 'development') {
   app.listen(port, () => {
