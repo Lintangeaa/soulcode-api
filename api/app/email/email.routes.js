@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import emailController from './email.controller';
-import requestHandler from '../../utils/request';
+import emailController from './email.controller.js';
+import requestHandler from '../../utils/request.js';
 
 const emailRouter = Router();
 

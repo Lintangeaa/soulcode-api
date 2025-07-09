@@ -1,7 +1,7 @@
 import express from 'express';
 import serverless from 'serverless-http';
-import { NODE_ENV, PORT } from './libs/index';
-import emailRouter from './app/email/email.routes';
+import emailRouter from './app/email/email.routes.js';
+import { NODE_ENV, PORT } from './libs/index.js';
 
 const app = express();
 const port = PORT || 3000;
